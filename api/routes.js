@@ -67,7 +67,7 @@ router.get('/allusers', (req, res) => {
     User.findAll({
         attributes: { exclude: ["createdAt", "updatedAt"] }
     }).then( data => {
-    res.json(data)})
+        res.json(data)})
 })
 
 router.get('/users', authenticateUser, (req, res) => {
